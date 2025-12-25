@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Мастера - Салон красоты "Время стиля"{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="section-title">
+        <h2>Наши мастера</h2>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card master-card">
+                <div class="card-body text-center">
+                    <div class="bg-light rounded-circle mx-auto mb-3" style="width: 150px; height: 150px; display: flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-person-circle" style="font-size: 5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <h5 class="card-title">Анна Петрова</h5>
+                    <p class="card-text"><strong>Специализация:</strong> Парикмахер-стилист</p>
+                    <p class="card-text">Опыт работы: 10 лет</p>
+                    <p class="card-text">Профессиональный мастер с индивидуальным подходом к каждому клиенту. Специализируется на сложных техниках окрашивания и укладке.</p>
+                    <a href="/booking" class="btn btn-primary">Записаться</a>
+                </div>
+            </div>
+        <div class="col-md-4">
+            <div class="card master-card">
+                <div class="card-body text-center">
+                    <div class="bg-light rounded-circle mx-auto mb-3" style="width: 150px; height: 150px; display: flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-person-circle" style="font-size: 5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <h5 class="card-title">Мария Сидорова</h5>
+                    <p class="card-text"><strong>Специализация:</strong> Визажист</p>
+                    <p class="card-text">Опыт работы: 8 лет</p>
+                    <p class="card-text">Профессиональный визажист с чувством стиля. Создает безупречный макияж для любого случая - от повседневного до вечернего.</p>
+                    <a href="/booking" class="btn btn-primary">Записаться</a>
+                </div>
+            </div>
+        <div class="col-md-4">
+            <div class="card master-card">
+                <div class="card-body text-center">
+                    <div class="bg-light rounded-circle mx-auto mb-3" style="width: 150px; height: 150px; display: flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-person-circle" style="font-size: 5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <h5 class="card-title">Елена Козлова</h5>
+                    <p class="card-text"><strong>Специализация:</strong> Мастер маникюра</p>
+                    <p class="card-text">Опыт работы: 7 лет</p>
+                    <p class="card-text">Мастер маникюра и педикюра с вниманием к деталям. Специализируется на укрепляющих покрытиях и дизайне ногтей.</p>
+                    <a href="/booking" class="btn btn-primary">Записаться</a>
+                </div>
+            </div>
+        </div>
+    
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="card appointment-form">
+                <div class="card-body">
+                    <h5 class="card-title">Отзывы о мастерах</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h6 class="card-title">Ольга Иванова</h6>
+                                    <div class="mb-2">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    </div>
+                                    <p class="card-text">Анна Петрова - настоящий профессионал! Сделала мне сложное окрашивание, результат превзошел все ожидания!</p>
+                                </div>
+                            </div>
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h6 class="card-title">Дарья Смирнова</h6>
+                                    <div class="mb-2">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    </div>
+                                    <p class="card-text">Мария - волшебница с кисточкой! Создала идеальный макияж для моей свадьбы.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

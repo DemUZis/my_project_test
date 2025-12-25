@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}Услуги - Салон красоты "Время стиля"{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="section-title">
+        <h2>Наши услуги</h2>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card appointment-form">
+                <div class="card-body">
+                    <h5 class="card-title">Услуги салона</h5>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Название</th>
+                                    <th>Описание</th>
+                                    <th>Длительность</th>
+                                    <th>Цена</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Женская стрижка</td>
+                                    <td>Классическая женская стрижка с укладкой</td>
+                                    <td>60 мин</td>
+                                    <td>1500 ₽</td>
+                                    <td>
+                                        <a href="/booking" class="btn btn-primary btn-sm">Записаться</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Мужская стрижка</td>
+                                    <td>Классическая мужская стрижка</td>
+                                    <td>45 мин</td>
+                                    <td>1200 ₽</td>
+                                    <td>
+                                        <a href="/booking" class="btn btn-primary btn-sm">Записаться</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Окрашивание волос</td>
+                                    <td>Окрашивание волос краской без аммиака</td>
+                                    <td>120 мин</td>
+                                    <td>2500 ₽</td>
+                                    <td>
+                                        <a href="/booking" class="btn btn-primary btn-sm">Записаться</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Маникюр</td>
+                                    <td>Классический маникюр с покрытием</td>
+                                    <td>90 мин</td>
+                                    <td>1800 ₽</td>
+                                    <td>
+                                        <a href="/booking" class="btn btn-primary btn-sm">Записаться</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Педикюр</td>
+                                    <td>Классический педикюр с покрытием</td>
+                                    <td>120 мин</td>
+                                    <td>2200 ₽</td>
+                                    <td>
+                                        <a href="/booking" class="btn btn-primary btn-sm">Записаться</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Макияж</td>
+                                    <td>Профессиональный макияж для любого случая</td>
+                                    <td>60 мин</td>
+                                    <td>2000 ₽</td>
+                                    <td>
+                                        <a href="/booking" class="btn btn-primary btn-sm">Записаться</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Мои клиенты - Салон красоты "Время стиля"{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="section-title">
+        <h2>Мои клиенты</h2>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card appointment-form">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Клиент</th>
+                                    <th>Услуга</th>
+                                    <th>Дата</th>
+                                    <th>Время</th>
+                                    <th>Статус</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Иванова О.А.</td>
+                                    <td>Женская стрижка</td>
+                                    <td>2023-05-15</td>
+                                    <td>09:00</td>
+                                    <td><span class="badge bg-success">Завершено</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-secondary">Детали</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Петрова М.С.</td>
+                                    <td>Окрашивание волос</td>
+                                    <td>2023-05-15</td>
+                                    <td>10:00</td>
+                                    <td><span class="badge bg-primary">В процессе</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-secondary">Детали</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Сидорова Е.В.</td>
+                                    <td>Макияж</td>
+                                    <td>2023-05-15</td>
+                                    <td>12:00</td>
+                                    <td><span class="badge bg-warning">Ожидание</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-secondary">Детали</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Козлова А.Н.</td>
+                                    <td>Маникюр</td>
+                                    <td>2023-05-15</td>
+                                    <td>14:00</td>
+                                    <td><span class="badge bg-info">Бронь</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-secondary">Детали</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Волкова Т.М.</td>
+                                    <td>Педикюр</td>
+                                    <td>2023-05-16</td>
+                                    <td>11:00</td>
+                                    <td><span class="badge bg-primary">Запланировано</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-secondary">Детали</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Морозова К.И.</td>
+                                    <td>Стрижка бороды</td>
+                                    <td>2023-05-16</td>
+                                    <td>15:00</td>
+                                    <td><span class="badge bg-primary">Запланировано</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-secondary">Детали</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

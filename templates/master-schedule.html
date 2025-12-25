@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}Мое расписание - Салон красоты "Время стиля"{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="section-title">
+        <h2>Мое расписание</h2>
+    </div>
+    
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card appointment-form">
+                <div class="card-body">
+                    <h5 class="card-title">Выберите дату</h5>
+                    <form id="dateForm">
+                        <div class="row align-items-center">
+                            <div class="col-md-3">
+                                <input type="date" class="form-control" id="selectedDate" required>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary">Показать расписание</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card appointment-form">
+                <div class="card-body">
+                    <h5 class="card-title">Расписание на 15 мая 2023</h5>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Время</th>
+                                    <th>Клиент</th>
+                                    <th>Услуга</th>
+                                    <th>Статус</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>09:00 - 10:00</td>
+                                    <td>Иванова О.А.</td>
+                                    <td>Женская стрижка</td>
+                                    <td><span class="badge bg-success">Завершено</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-secondary">Детали</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10:00 - 11:30</td>
+                                    <td>Петрова М.С.</td>
+                                    <td>Окрашивание волос</td>
+                                    <td><span class="badge bg-primary">В процессе</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-secondary">Детали</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>12:00 - 13:0</td>
+                                    <td>Сидорова Е.В.</td>
+                                    <td>Макияж</td>
+                                    <td><span class="badge bg-warning">Ожидание</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-secondary">Детали</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>14:00 - 15:30</td>
+                                    <td>Козлова А.Н.</td>
+                                    <td>Маникюр</td>
+                                    <td><span class="badge bg-info">Бронь</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-secondary">Детали</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>16:00 - 17:0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="badge bg-light text-dark">Свободно</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-success">Заблокировать</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>17:0 - 18:00</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="badge bg-light text-dark">Свободно</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-success">Заблокировать</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById('dateForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const selectedDate = document.getElementById('selectedDate').value;
+    
+    if(selectedDate) {
+        // В реальном приложении здесь будет запрос на сервер для получения расписания
+        alert('Показано расписание на: ' + selectedDate);
+    } else {
+        alert('Пожалуйста, выберите дату');
+    }
+});
+</script>
+{% endblock %}

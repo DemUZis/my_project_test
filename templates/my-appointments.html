@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Мои записи - Салон красоты "Время стиля"{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="section-title">
+        <h2>Мои записи</h2>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card appointment-form">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Услуга</th>
+                                    <th>Мастер</th>
+                                    <th>Дата</th>
+                                    <th>Время</th>
+                                    <th>Статус</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Женская стрижка</td>
+                                    <td>Анна Петрова</td>
+                                    <td>2023-05-15</td>
+                                    <td>14:00</td>
+                                    <td><span class="badge bg-primary">Запланировано</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-danger">Отменить</button>
+                                        <button class="btn btn-sm btn-outline-secondary">Оставить отзыв</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Маникюр</td>
+                                    <td>Елена Козлова</td>
+                                    <td>2023-05-16</td>
+                                    <td>11:00</td>
+                                    <td><span class="badge bg-success">Выполнено</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-secondary">Оставить отзыв</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Окрашивание волос</td>
+                                    <td>Анна Петрова</td>
+                                    <td>2023-05-20</td>
+                                    <td>10:00</td>
+                                    <td><span class="badge bg-warning">Подтверждение</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-danger">Отменить</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Макияж</td>
+                                    <td>Мария Сидорова</td>
+                                    <td>2023-05-22</td>
+                                    <td>13:00</td>
+                                    <td><span class="badge bg-success">Выполнено</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-secondary">Оставить отзыв</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

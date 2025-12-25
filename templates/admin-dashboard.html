@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+
+{% block title %}Админ-панель - Салон красоты "Время стиля"{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="section-title">
+        <h2>Административная панель</h2>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="bi bi-people" style="font-size: 3rem; color: var(--primary-blue);"></i>
+                    <h5 class="card-title mt-3">Клиенты</h5>
+                    <p class="card-text">Управление клиентами</p>
+                    <a href="#" class="btn btn-primary">Перейти</a>
+                </div>
+            </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="bi bi-scissors" style="font-size: 3rem; color: var(--primary-blue);"></i>
+                    <h5 class="card-title mt-3">Услуги</h5>
+                    <p class="card-text">Управление услугами</p>
+                    <a href="#" class="btn btn-primary">Перейти</a>
+                </div>
+            </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="bi bi-person-workspace" style="font-size: 3rem; color: var(--primary-blue);"></i>
+                    <h5 class="card-title mt-3">Мастера</h5>
+                    <p class="card-text">Управление персоналом</p>
+                    <a href="#" class="btn btn-primary">Перейти</a>
+                </div>
+            </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="bi bi-graph-up" style="font-size: 3rem; color: var(--primary-blue);"></i>
+                    <h5 class="card-title mt-3">Статистика</h5>
+                    <p class="card-text">Аналитика и отчеты</p>
+                    <a href="#" class="btn btn-primary">Перейти</a>
+                </div>
+            </div>
+        </div>
+    
+    <div class="row mt-5">
+        <div class="col-md-8">
+            <div class="card appointment-form">
+                <div class="card-body">
+                    <h5 class="card-title">Статистика за месяц</h5>
+                    <div class="row text-center">
+                        <div class="col-md-3">
+                            <h3>120</h3>
+                            <p>Записей</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h3>85000 ₽</h3>
+                            <p>Выручка</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h3>95%</h3>
+                            <p>Удовлетворенность</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h3>25</h3>
+                            <p>Новых клиентов</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="col-md-4">
+            <div class="card appointment-form">
+                <div class="card-body">
+                    <h5 class="card-title">Популярные услуги</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Женская стрижка
+                            <span class="badge bg-primary rounded-pill">32</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Окрашивание волос
+                            <span class="badge bg-primary rounded-pill">28</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Маникюр
+                            <span class="badge bg-primary rounded-pill">25</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Макияж
+                            <span class="badge bg-primary rounded-pill">18</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Педикюр
+                            <span class="badge bg-primary rounded-pill">17</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="card appointment-form">
+                <div class="card-body">
+                    <h5 class="card-title">Последние записи</h5>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Клиент</th>
+                                    <th>Мастер</th>
+                                    <th>Услуга</th>
+                                    <th>Дата</th>
+                                    <th>Время</th>
+                                    <th>Статус</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Иванова О.А.</td>
+                                    <td>Анна Петрова</td>
+                                    <td>Женская стрижка</td>
+                                    <td>2023-05-15</td>
+                                    <td>09:00</td>
+                                    <td><span class="badge bg-success">Завершено</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Петрова М.С.</td>
+                                    <td>Анна Петрова</td>
+                                    <td>Окрашивание волос</td>
+                                    <td>2023-05-15</td>
+                                    <td>10:00</td>
+                                    <td><span class="badge bg-primary">В процессе</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Сидорова Е.В.</td>
+                                    <td>Мария Сидорова</td>
+                                    <td>Макияж</td>
+                                    <td>2023-05-15</td>
+                                    <td>12:00</td>
+                                    <td><span class="badge bg-warning">Ожидание</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Козлова А.Н.</td>
+                                    <td>Елена Козлова</td>
+                                    <td>Маникюр</td>
+                                    <td>2023-05-15</td>
+                                    <td>14:00</td>
+                                    <td><span class="badge bg-info">Бронь</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Волкова Т.М.</td>
+                                    <td>Елена Козлова</td>
+                                    <td>Педикюр</td>
+                                    <td>2023-05-16</td>
+                                    <td>11:00</td>
+                                    <td><span class="badge bg-primary">Запланировано</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

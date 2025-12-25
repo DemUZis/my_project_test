@@ -1,7 +1,8 @@
 from fastapi import APIRouter
 
-router = APIRouter(prefix="/sample",tags=["Sample"])
+router = APIRouter()
 
-@router.get("/")
-async def sample_func():
-    return {"msg":"Пример ручки"}
+
+@router.get("/sample")
+def sample_endpoint():
+    return {"message": "This is a sample endpoint"}

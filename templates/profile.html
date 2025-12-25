@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Профиль - Салон красоты "Время стиля"{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="section-title">
+        <h2>Личный кабинет</h2>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <div class="bg-light rounded-circle mx-auto mb-3" style="width: 150px; height: 150px; display: flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-person-circle" style="font-size: 5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <h5 class="card-title">{{ current_user.username if current_user else 'Гость' }}</h5>
+                    <p class="card-text">{{ current_user.email if current_user else 'Нет данных' }}</p>
+                    <p class="card-text">
+                        <span class="badge bg-primary">{{ current_user.role if current_user else 'Гость' }}</span>
+                    </p>
+                </div>
+            </div>
+        
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Информация профиля</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Имя пользователя</label>
+                            <input type="text" class="form-control" id="username" value="{{ current_user.username if current_user else '' }}" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" value="{{ current_user.email if current_user else '' }}" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="role" class="form-label">Роль</label>
+                            <input type="text" class="form-control" id="role" value="{{ current_user.role if current_user else '' }}" disabled>
+                        </div>
+                        <button type="button" class="btn btn-primary" disabled>Сохранить изменения</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    {% if current_user and current_user.role == 'client' %}
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Мои отзывы</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="card-title">Анна Петрова</h6>
+                                        <div>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                        </div>
+                                    <p class="card-text">Отличный мастер! Сделала мне сложное окрашивание, результат превзошел все ожидания!</p>
+                                    <small class="text-muted">2023-05-10</small>
+                                </div>
+                            </div>
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="card-title">Мария Сидорова</h6>
+                                        <div>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-half text-warning"></i>
+                                        </div>
+                                    <p class="card-text">Хороший макияж, но можно было сделать аккуратнее.</p>
+                                    <small class="text-muted">2023-05-05</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
